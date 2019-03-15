@@ -1,0 +1,12 @@
+version: '3'
+
+services:
+  dev:
+    image: node:10.7.0
+    volumes:
+      - .:/usr/app
+      - ./node_modules:/usr/app/node_modules
+    working_dir: /usr/app
+    command: npm run start
+    ports:
+      - 8000:8000
